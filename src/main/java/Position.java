@@ -25,7 +25,7 @@ public class Position {
         this.y = y;
     }
 
-    // Sobrescrevendo o método equals para comparar posições
+    // Sobrescrevendo o metodo equals para comparar posições
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -34,7 +34,7 @@ public class Position {
         return x == position.x && y == position.y;
     }
 
-    // Sobrescrevendo o método hashCode (boa prática quando sobrescrevemos equals)
+    // Sobrescrevendo o metodo hashCode (boa prática quando sobrescrevemos equals)
     @Override
     public int hashCode() {
         return 31 * x + y;

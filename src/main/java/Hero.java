@@ -27,7 +27,7 @@ public class Hero extends Element {
         return new Position(Math.min(maxCols - 1, position.getX() + 1), position.getY()); // Move para a direita
     }
 
-    // Implementação do método abstrato draw
+    // Implementação do metodo abstrato draw
     @Override
     public void draw(TextGraphics graphics) {
         graphics.setForegroundColor(TextColor.Factory.fromString("#FFFF00")); // Cor amarela para o herói

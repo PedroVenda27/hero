@@ -18,6 +18,6 @@ public abstract class Element {
         this.position = position;
     }
 
-    // Método abstrato para desenhar o elemento
+    // Metodo abstrato para desenhar o elemento
     public abstract void draw(TextGraphics graphics);
 }

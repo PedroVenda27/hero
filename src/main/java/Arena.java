@@ -29,7 +29,7 @@ public class Arena {
         this.monsters = createMonsters(); // Cria os monstros
     }
 
-    // Método para criar as paredes ao redor da arena
+    // Metodo para criar as paredes ao redor da arena
     private List<Wall> createWalls() {
         List<Wall> walls = new ArrayList<>();
         // Paredes horizontais (superior e inferior)
@@ -45,7 +45,7 @@ public class Arena {
         return walls;
     }
 
-    // Método para criar moedas em posições aleatórias
+    // Metodo para criar moedas em posições aleatórias
     private List<Coin> createCoins() {
         Random random = new Random();
         List<Coin> coins = new ArrayList<>();
@@ -62,7 +62,7 @@ public class Arena {
         return coins;
     }
 
-    // Método para criar monstros em posições aleatórias
+    // Metodo para criar monstros em posições aleatórias
     private List<Monster> createMonsters() {
         Random random = new Random();
         List<Monster> monsters = new ArrayList<>();

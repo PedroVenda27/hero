@@ -13,27 +13,28 @@ public class Game {
     private Screen screen;
     private Arena arena;
 
-    // Construtor da classe Game
+        // Construir a Classe Jogo
     public Game() throws IOException {
-        // Definindo o tamanho do terminal (40 colunas, 20 linhas)
+
+        // Definir o tamanho do terminal (40 colunas, 20 linhas)
         TerminalSize terminalSize = new TerminalSize(40, 20);
         DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory()
                 .setInitialTerminalSize(terminalSize);
 
-        // Criando o terminal e a tela
+        // Criar o terminal e a Tela
         Terminal terminal = terminalFactory.createTerminal();
         screen = new TerminalScreen(terminal);
 
-        // Configurando a tela
-        screen.setCursorPosition(null); // Não precisamos do cursor
+        // Configurar a Tela
+        screen.setCursorPosition(null); // Não Precisamos do cursor
         screen.startScreen(); // Iniciar a tela
         screen.doResizeIfNecessary(); // Redimensionar a tela se necessário
 
-        // Inicializando a arena com o herói e as paredes dentro
+        // Inicializando a arena com o Herói e as paredes dentro
         arena = new Arena(40, 20);
     }
 
-    // Método responsável por desenhar na tela
+    // Metodo responsável por desenhar na tela
     private void draw() throws IOException {
         screen.clear();
         TextGraphics graphics = screen.newTextGraphics();
@@ -41,12 +42,12 @@ public class Game {
         screen.refresh(); // Atualiza a tela para mostrar as mudanças
     }
 
-    // Método responsável por processar as teclas pressionadas
+    // Metodo responsável por processar as teclas pressionadas
     private void processKey(KeyStroke key) {
         arena.processKey(key); // A arena lida com o processo de movimentação do herói
     }
 
-    // Método responsável por rodar o jogo
+    // Metodo responsável por rodar o jogo
     public void run() throws IOException {
         while (true) {
             draw(); // Desenha a arena e o herói na tela
@@ -59,7 +60,7 @@ public class Game {
         }
     }
 
-    // Método main para iniciar o jogo
+    // Metodo main para iniciar o jogo
     public static void main(String[] args) {
         try {
             // Cria uma nova instância do jogo e executa

@@ -9,7 +9,7 @@ public class Coin extends Element {
         super(x, y); // Chama o construtor da classe Element
     }
 
-    // Implementação do método abstrato draw
+    // Implementação do metodo abstrato draw
     @Override
     public void draw(TextGraphics graphics) {
         graphics.setForegroundColor(TextColor.Factory.fromString("#FFD700")); // Cor dourada para a moeda

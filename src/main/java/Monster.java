@@ -11,14 +11,14 @@ public class Monster extends Element {
         super(x, y); // Chama o construtor da classe Element
     }
 
-    // Implementação do método abstrato draw
+    // Implementação do metodo abstrato draw
     @Override
     public void draw(TextGraphics graphics) {
         graphics.setForegroundColor(TextColor.Factory.fromString("#FF00FF")); // Cor roxa para o monstro
         graphics.putString(new TerminalPosition(position.getX(), position.getY()), "M"); // Desenha o monstro como 'M'
     }
 
-    // Método move para mover o monstro para uma posição adjacente aleatória
+    // Metodo move para mover o monstro para uma posição adjacente aleatória
     public Position move(int width, int height) {
         Random random = new Random();
         int x = position.getX();
